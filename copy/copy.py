@@ -17,7 +17,7 @@ from chrisapp.base import ChrisApp
 
 class Copy(ChrisApp):
     """
-    Copy file/folders from a directory given by the --dir argument to the output directory.
+    Copy an entire directory given by the --dir argument to the output directory.
     """
     AUTHORS         = 'FNNDSC (dev@babyMRI.org)'
     SELFPATH        = os.path.dirname(os.path.abspath(__file__))
@@ -26,7 +26,7 @@ class Copy(ChrisApp):
     TITLE           = 'A copy chris fs app'
     CATEGORY        = ''
     TYPE            = 'fs'
-    DESCRIPTION     = 'A plugin fs app to copy file/folders from a directory'
+    DESCRIPTION     = 'A plugin fs app to copy an entire directory'
     DOCUMENTATION   = 'http://wiki'
     LICENSE         = 'Opensource (MIT)'
     VERSION         = '0.1'

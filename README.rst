@@ -6,7 +6,7 @@ pl-copy
 Abstract
 ********
 
-A Chris 'fs' plugin app to copy file/folders from a directory into a Chris' feed.
+A Chris 'fs' plugin app to copy an entire directory into the output directory.
 
 Run
 ***
@@ -22,7 +22,7 @@ Assign an "input" directory to ``/incoming`` and an output directory to ``/outgo
             fnndsc/pl-copy copy.py            \
             --dir /incoming /outgoing
 
-The above will copy the contents of the host ``/home`` dir to the container's ``/outgoing``
+The above will recursively copy the entire host ``/home`` dir to the container's ``/outgoing``
 which in turn has been volume mapped to the host ``$(pwd)/out`` directory.
 
 Make sure that the host ``$(pwd)/out`` directory is world writable!
