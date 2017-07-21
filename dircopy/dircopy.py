@@ -1,5 +1,5 @@
 #                                                            _
-# copy fs app
+# dircopy fs app
 #
 # (c) 2016 Fetal-Neonatal Neuroimaging & Developmental Science Center
 #                   Boston Children's Hospital
@@ -23,7 +23,7 @@ class DirCopy(ChrisApp):
     SELFPATH        = os.path.dirname(os.path.abspath(__file__))
     SELFEXEC        = os.path.basename(__file__)
     EXECSHELL       = 'python3'
-    TITLE           = 'A copy chris fs app'
+    TITLE           = 'A directory copy chris fs app'
     CATEGORY        = ''
     TYPE            = 'fs'
     DESCRIPTION     = 'A plugin fs app to copy an entire directory'
