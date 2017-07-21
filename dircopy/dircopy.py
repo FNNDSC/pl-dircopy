@@ -15,7 +15,7 @@ import shutil
 from chrisapp.base import ChrisApp
 
 
-class Copy(ChrisApp):
+class DirCopy(ChrisApp):
     """
     Copy an entire directory given by the --dir argument to the output directory.
     """
@@ -43,5 +43,5 @@ class Copy(ChrisApp):
 
 # ENTRYPOINT
 if __name__ == "__main__":
-    app = Copy()
+    app = DirCopy()
     app.launch()

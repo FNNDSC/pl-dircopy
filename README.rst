@@ -1,6 +1,6 @@
-#######
-pl-copy
-#######
+##########
+pl-dircopy
+##########
 
 
 Abstract
@@ -19,7 +19,7 @@ Assign an "input" directory to ``/incoming`` and an output directory to ``/outgo
 .. code-block:: bash
 
     docker run -v /home:/incoming -v $(pwd)/out:/outgoing   \
-            fnndsc/pl-copy copy.py            \
+            fnndsc/pl-dircopy dircopy.py            \
             --dir /incoming /outgoing
 
 The above will recursively copy the entire host ``/home`` dir to the container's ``/outgoing``
