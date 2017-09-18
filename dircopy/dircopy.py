@@ -16,7 +16,8 @@ from distutils.dir_util import copy_tree
 
 class DirCopy(ChrisApp):
     """
-    Copy an entire directory given by the --dir argument to the output directory.
+    Copy the *contents* of a directory given by the --dir argument to a new 
+    directory specified by <options.outpudir>.
     """
     AUTHORS         = 'FNNDSC (dev@babyMRI.org)'
     SELFPATH        = os.path.dirname(os.path.abspath(__file__))
@@ -31,8 +32,12 @@ class DirCopy(ChrisApp):
     VERSION         = '0.1'
 
     def define_parameters(self):
-        self.add_argument('--dir', dest='dir', type=str, default='./', optional=True,
-                          help='directory to be copied')
+        self.add_argument('--dir', 
+                          dest          ='dir', 
+                          type          = str, 
+                          default       = './', 
+                          optional      = True,
+                          help          = 'directory to be copied')
 
     def run(self, options):
         output_folder = os.path.basename(options.dir.rstrip('/'))
