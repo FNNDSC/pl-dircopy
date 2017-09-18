@@ -9,12 +9,10 @@
 #
 
 import os
-import shutil
 
 # import the Chris app superclass
 from chrisapp.base import ChrisApp
 from distutils.dir_util import copy_tree
-
 
 class DirCopy(ChrisApp):
     """
@@ -39,9 +37,8 @@ class DirCopy(ChrisApp):
     def run(self, options):
         output_folder = os.path.basename(options.dir.rstrip('/'))
         output_path = os.path.join(options.outputdir, output_folder)
-        # shutil.copytree(options.dir, output_path)
-        print('Copying %s to %s' % (options.dir, output_path))
-        copy_tree(options.dir, output_path)
+        # print('Copying %s to %s' % (options.dir, options.outputdir))
+        copy_tree(options.dir, options.outputdir)
 
 
 # ENTRYPOINT
