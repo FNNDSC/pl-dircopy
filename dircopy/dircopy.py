@@ -40,6 +40,7 @@ class DirCopy(ChrisApp):
         output_folder = os.path.basename(options.dir.rstrip('/'))
         output_path = os.path.join(options.outputdir, output_folder)
         # shutil.copytree(options.dir, output_path)
+        print('Copying %s to %s' % options.dir, output_path)
         copy_tree(options.dir, output_path)
 
 
