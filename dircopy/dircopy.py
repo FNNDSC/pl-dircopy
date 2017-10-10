@@ -9,16 +9,15 @@
 #
 
 import os
-import shutil
 
 # import the Chris app superclass
 from chrisapp.base import ChrisApp
 from distutils.dir_util import copy_tree
 
-
 class DirCopy(ChrisApp):
     """
-    Copy an entire directory given by the --dir argument to the output directory.
+    Copy the *contents* of a directory given by the --dir argument to a new 
+    directory specified by <options.outpudir>.
     """
     AUTHORS         = 'FNNDSC (dev@babyMRI.org)'
     SELFPATH        = os.path.dirname(os.path.abspath(__file__))
@@ -41,8 +40,12 @@ class DirCopy(ChrisApp):
         """
         Define the CLI arguments accepted by this plugin app.
         """
-        self.add_argument('--dir', dest='dir', type=str, default='./', optional=True,
-                          help='directory to be copied')
+        self.add_argument('--dir', 
+                          dest          ='dir', 
+                          type          = str, 
+                          default       = './', 
+                          optional      = True,
+                          help          = 'directory to be copied')
 
     def run(self, options):
         """
@@ -50,8 +53,8 @@ class DirCopy(ChrisApp):
         """
         output_folder = os.path.basename(options.dir.rstrip('/'))
         output_path = os.path.join(options.outputdir, output_folder)
-        # shutil.copytree(options.dir, output_path)
-        copy_tree(options.dir, output_path)
+        # print('Copying %s to %s' % (options.dir, options.outputdir))
+        copy_tree(options.dir, options.outputdir)
 
 
 # ENTRYPOINT
