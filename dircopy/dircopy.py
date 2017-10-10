@@ -32,11 +32,22 @@ class DirCopy(ChrisApp):
     LICENSE         = 'Opensource (MIT)'
     VERSION         = '0.1'
 
+    # Fill out this with key-value output descriptive info (such as an output file path
+    # relative to the output dir) that you want to save to the output meta file when
+    # called with the --saveoutputmeta flag
+    OUTPUT_META_DICT = {}
+
     def define_parameters(self):
+        """
+        Define the CLI arguments accepted by this plugin app.
+        """
         self.add_argument('--dir', dest='dir', type=str, default='./', optional=True,
                           help='directory to be copied')
 
     def run(self, options):
+        """
+        Define the code to be run by this plugin app.
+        """
         output_folder = os.path.basename(options.dir.rstrip('/'))
         output_path = os.path.join(options.outputdir, output_folder)
         # shutil.copytree(options.dir, output_path)
