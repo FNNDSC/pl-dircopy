@@ -42,7 +42,7 @@ class DirCopy(ChrisApp):
         """
         self.add_argument('--dir', 
                           dest          ='dir', 
-                          type          = str, 
+                          type          = ChrisApp.path,
                           default       = './', 
                           optional      = True,
                           help          = 'directory to be copied')
@@ -51,8 +51,8 @@ class DirCopy(ChrisApp):
         """
         Define the code to be run by this plugin app.
         """
-        output_folder = os.path.basename(options.dir.rstrip('/'))
-        output_path = os.path.join(options.outputdir, output_folder)
+        #output_folder = os.path.basename(options.dir.rstrip('/'))
+        #output_path = os.path.join(options.outputdir, output_folder)
         # print('Copying %s to %s' % (options.dir, options.outputdir))
         copy_tree(options.dir, options.outputdir)
 
