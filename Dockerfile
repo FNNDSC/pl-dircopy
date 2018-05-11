@@ -11,4 +11,4 @@ WORKDIR $APPROOT
 
 RUN pip install -r requirements.txt
 
-CMD ["dircopy.py", "--json"]
+CMD ["dircopy.py", "--help"]
