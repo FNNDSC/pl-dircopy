@@ -3,7 +3,7 @@
 FROM fnndsc/ubuntu-python3:latest
 MAINTAINER fnndsc "dev@babymri.org"
 
-ENV APPROOT="/usr/src/dircopy"  VERSION="0.1"
+ENV APPROOT="/usr/src/dircopy"
 COPY ["dircopy", "${APPROOT}"]
 COPY ["requirements.txt", "${APPROOT}"]
 

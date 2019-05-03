@@ -29,7 +29,7 @@ class DirCopy(ChrisApp):
     DESCRIPTION     = 'A plugin fs app to copy an entire directory'
     DOCUMENTATION   = 'http://wiki'
     LICENSE         = 'Opensource (MIT)'
-    VERSION         = '0.1'
+    VERSION         = '0.1.1'
     MAX_NUMBER_OF_WORKERS = 1  # Override with integer value
     MIN_NUMBER_OF_WORKERS = 1  # Override with integer value
     MAX_CPU_LIMIT = ''  # Override with millicore value as string, e.g. '2000m'
