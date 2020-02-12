@@ -24,7 +24,7 @@ class DirCopy(ChrisApp):
     SELFEXEC        = os.path.basename(__file__)
     EXECSHELL       = 'python3'
     TITLE           = 'A directory copy chris fs app'
-    CATEGORY        = ''
+    CATEGORY        = 'copy'
     TYPE            = 'fs'
     DESCRIPTION     = 'A plugin fs app to copy an entire directory'
     DOCUMENTATION   = 'http://wiki'
