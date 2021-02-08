@@ -31,7 +31,7 @@ This argument is a string containing one or more directories separated by comma.
 
 
 Pre-conditions
-**************
+--------------
 
 When running this plugin from a client perspective to CUBE, note that the *input directory* is
 actually assumed to exist within swift storage, thus the value of the *input directory* is the
