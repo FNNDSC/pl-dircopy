@@ -52,7 +52,7 @@ Usage
             [-v <level>] [--verbosity <level>]
             [--version]
             <outputDir>
-            [--dir <DIR>]
+            --dir <DIR>
 
 
 Arguments
@@ -84,7 +84,7 @@ Arguments
     <outputDir>
     Output directory.
 
-    [--dir <DIR>]
+    --dir <DIR>
     Required, it's a string representing a comma-separated list of one or more
     directories.
 
