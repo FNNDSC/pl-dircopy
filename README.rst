@@ -1,5 +1,5 @@
 pl-dircopy
-================================
+==========
 
 .. image:: https://img.shields.io/docker/v/fnndsc/pl-dircopy
     :target: https://hub.docker.com/r/fnndsc/pl-dircopy
