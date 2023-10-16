@@ -11,7 +11,7 @@ setup(
     long_description = readme,
     author           = 'FNNDSC',
     author_email     = 'dev@babyMRI.org',
-    url              = 'http://wiki',
+    url              = 'https://github.com/FNNDSC/pl-dircopy',
     packages         = ['dircopy'],
     install_requires = ['chrisapp'],
     test_suite       = 'nose.collector',
