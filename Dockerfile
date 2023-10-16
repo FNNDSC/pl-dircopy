@@ -21,15 +21,18 @@
 #   docker run -ti -e HOST_IP=$(ip route | grep -v docker | awk '{if(NF==11) print $9}') --entrypoint /bin/bash local/pl-dircopy
 #
 
-FROM python:3.9.1-slim-buster
-LABEL maintainer="FNNDSC <dev@babyMRI.org>"
+FROM python:3.12.0-alpine3.18
 
-WORKDIR /usr/local/src
+ARG _SRCDIR=/usr/local/src/app
+WORKDIR ${_SRCDIR}
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN --mount=type=cache,sharing=private,target=/root/.cache/pip pip install -r requirements.txt
 
 COPY . .
-RUN pip install .
+ARG extras_require=none
+RUN pip install . \
+    && cd / && rm -rf ${_SRCDIR}
+WORKDIR /
 
-CMD ["dircopy", "--help"]
+CMD ["dircopy"]
