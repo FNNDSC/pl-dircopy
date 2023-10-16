@@ -6,7 +6,7 @@ with open(path.join(path.dirname(path.abspath(__file__)), 'README.rst')) as f:
 
 setup(
     name             = 'dircopy',
-    version          = '2.1.1',
+    version          = '2.1.2',
     description      = 'A plugin fs app to copy one or more obj storage directories',
     long_description = readme,
     author           = 'FNNDSC',

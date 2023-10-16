@@ -96,8 +96,8 @@ class DirCopy(ChrisApp):
     ICON                    = '' # url of an icon image
     MAX_NUMBER_OF_WORKERS   = 1  # Override with integer value
     MIN_NUMBER_OF_WORKERS   = 1  # Override with integer value
-    MAX_CPU_LIMIT           = '' # Override with millicore value as string, e.g. '2000m'
-    MIN_CPU_LIMIT           = '' # Override with millicore value as string, e.g. '2000m'
+    MAX_CPU_LIMIT           = '1000m'  # Override with millicore value as string, e.g. '2000m'
+    MIN_CPU_LIMIT           = '50m'    # Override with millicore value as string, e.g. '2000m'
     MAX_MEMORY_LIMIT        = '' # Override with string, e.g. '1Gi', '2000Mi'
     MIN_MEMORY_LIMIT        = '' # Override with string, e.g. '1Gi', '2000Mi'
     MIN_GPU_LIMIT           = 0  # Override with the minimum number of GPUs, as an integer, for your plugin
